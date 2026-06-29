@@ -1,19 +1,132 @@
-"
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description"
-        content="Learn more about Unixsense LLP - Industrial Instrumentation, Gas Detection & Safety Solutions.">
+        content="Learn more about Unixsense LLP - Experts in Industrial Gas Detection, Fire Detection, Calibration, Industrial Instrumentation and Safety Solutions.">
+
     <title>About Us | Unixsense LLP</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /*======================================
+        COMPANY STATISTICS
+======================================*/
+
+        .company-overview {
+            background: #f7f9fc;
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #0A2B6F, #69BE28);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(10, 43, 111, .15);
+        }
+
+        .stat-card h2 {
+            font-size: 52px;
+            color: #69BE28;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .stat-card p {
+            color: #555;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /*=============================
+        RESPONSIVE
+=============================*/
+
+        @media(max-width:992px) {
+
+            .stats-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+        @media(max-width:576px) {
+
+            .company-overview {
+
+                padding: 60px 20px;
+
+            }
+
+            .stats-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+            }
+
+            .stat-card {
+
+                padding: 30px 20px;
+
+            }
+
+            .stat-card h2 {
+
+                font-size: 42px;
+
+            }
+
+            .stat-card p {
+
+                font-size: 16px;
+
+            }
+
+        }
+
+
+
         /* ===========================
         CARD IMAGE
 =========================== */
+
+
 
         .card {
             overflow: hidden;
@@ -72,9 +185,12 @@
             align-self: left;
         }
     </style>
+
 </head>
 
 <body>
+
+    <!-- ================= HEADER ================= -->
 
     <header>
 
@@ -267,181 +383,43 @@
 
     </div>
 
+    <!-- ================= HERO ================= -->
 
+    <section class="hero about-hero">
 
-    <section class="about-company">
-        <div class="container about-grid">
+        <div class="overlay"></div>
 
-            <div class="about-content">
+        <div class="container hero-content">
 
-                <h2 class="section-title" style="text-align:left;">Who We Are</h2>
-
-                <p>
-                    Unixsense LLP is a trusted provider of industrial instrumentation,
-                    gas detection systems, environmental monitoring solutions,
-                    and industrial safety products.
-                </p>
-
-                <br>
-
-                <p>
-                    We specialize in sales, supply, calibration, installation,
-                    commissioning, and maintenance of high-quality instrumentation
-                    products across various industrial sectors.
-                </p>
-
-                <br>
-
-                <p>
-                    Our objective is to deliver reliable products, accurate
-                    technical support, and professional service solutions
-                    that help industries maintain safety, compliance,
-                    and operational efficiency.
-                </p>
-
-            </div>
-
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80"
-                    alt="Industrial Facility">
-            </div>
-
-        </div>
-    </section>
-
-    <section class="company-overview">
-        <div class="container">
-
-            <h2 class="section-title">Company Overview</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>Sales & Supply</h3>
-                    <p>Reliable industrial instrumentation and safety products.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Calibration</h3>
-                    <p>High-accuracy calibration for industrial instruments.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Installation</h3>
-                    <p>Professional installation and commissioning services.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Maintenance</h3>
-                    <p>Preventive maintenance and AMC support.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Technical Support</h3>
-                    <p>Fast response from experienced engineers.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Customer Focus</h3>
-                    <p>Tailored solutions to meet operational requirements.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section class="mission-vision">
-        <div class="container">
-
-            <h2 class="section-title">Mission & Vision</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>Our Mission</h3>
-                    <p>
-                        To provide dependable instrumentation products and
-                        technical services that improve industrial safety,
-                        productivity, and operational excellence.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Our Vision</h3>
-                    <p>
-                        To become a preferred industrial instrumentation
-                        and safety solutions provider recognized for quality,
-                        innovation, technical expertise, and customer satisfaction.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <section class="highlight">
-        <div class="container">
-            <h2 class="section-title white">Why Choose Unixsense LLP?</h2>
-            <ul class="why-list">
-                <li>✔ 10+ Years Industry Experience</li>
-                <li>✔ Sales & Supply of Industrial Instrumentation</li>
-                <li>✔ Expert Calibration Services</li>
-                <li>✔ Installation & Commissioning Support</li>
-                <li>✔ Preventive Maintenance & AMC Services</li>
-                <li>✔ Fast Technical Response</li>
-                <li>✔ Genuine Products & Accessories</li>
-                <li>✔ PAN India Support</li>
-                <li>✔ Customer-Focused Solutions</li>
-            </ul>
-        </div>
-    </section>
-
-
-    <section class="brands-section">
-
-        <div class="container">
-
-            <h2 class="section-title">Our Trusted Brands</h2>
-
-            <p class="section-subtitle">
-                We supply genuine products from globally recognized industrial instrumentation
-                and gas detection manufacturers.
+            <p class="hero-tag">
+                ABOUT UNIXSENSE LLP
             </p>
 
-            <div class="brands-grid">
+            <h1>
+                Industrial Gas Detection & Fire Detection Experts
+            </h1>
 
-                <div class="brand-card">
-                    <img src="./image/honeywell.png" alt="Honeywell">
-                </div>
+            <p>
 
-                <div class="brand-card">
-                    <img src="./image/drager.png" alt="Dräger">
-                </div>
+                Delivering reliable Industrial Gas Detection, Fire Detection,
+                Calibration and Industrial Safety Solutions backed by over
+                25 years of industry expertise.
 
-                <div class="brand-card">
-                    <img src="./image/msa.png" alt="MSA Safety">
-                </div>
+            </p>
 
-                <div class="brand-card">
-                    <img src="./image/industrial-scientific.png" alt="Industrial Scientific">
-                </div>
+            <div class="hero-buttons">
 
-                <div class="brand-card">
-                    <img src="./image/crowcon.avif" alt="Crowcon">
-                </div>
+                <a href="#" onclick="openQuote()" class="btn primary">
 
-                <div class="brand-card">
-                    <img src="./image/rki.png" alt="RKI Instruments">
-                </div>
+                    Request Quote
 
-                <div class="brand-card">
-                    <img src="./image/fluke.png" alt="Fluke">
-                </div>
+                </a>
 
-                <div class="brand-card">
-                    <img src="./image/testo.jpg" alt="Testo">
-                </div>
+                <a href="contact.html" class="btn secondary">
+
+                    Contact Us
+
+                </a>
 
             </div>
 
@@ -449,75 +427,400 @@
 
     </section>
 
-    <section class="industries">
+    <!-- ================= WHO WE ARE ================= -->
+
+    <section>
+
+        <div class="container about-grid">
+
+            <div>
+
+                <h2 class="section-title left">
+
+                    Who We Are
+
+                </h2>
+
+                <p>
+
+                    Unixsense LLP, operating as Unitech Solutions, has been delivering
+                    reliable Industrial Gas Detection, Fire Detection and Industrial
+                    Safety Solutions for over <strong>10 years.</strong>
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Backed by our promoters' <strong>25+ years of industrial safety experience</strong>,
+                    we specialize in supplying high-quality products, calibration,
+                    installation, commissioning and preventive maintenance services.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Our mission is to protect people, assets and the environment
+                    through dependable safety technologies and professional support.
+
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <img src="./image/Calibration Services.jpg" width="450px" alt="Unixsense LLP" class="about-image">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATS ================= -->
+
+    <section class="company-overview">
+
         <div class="container">
-            <h2 class="section-title">Industries We Serve</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Pharmaceutical.jpg" alt="Safety Instruments">
-                    </div>
-                    <h3 class="centre">Pharmaceutical</h3>
-                    <p class="centre">Monitoring, validation and safety solutions.</p>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h2>10+</h2>
+
+                    <p>Years of Industry Presence</p>
+
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Chemical Plants.jpg" alt="Safety Instruments">
-                    </div>
-                    <h3 class="centre">Chemical Plants</h3>
-                    <p class="centre">Gas detection & hazardous monitoring.</p>
+
+                <div class="stat-card">
+
+                    <h2>25+</h2>
+
+                    <p>Years of Promoters' Experience</p>
+
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Power Plants.jpeg" alt="Safety Instruments">
-                    </div>
-                    <h3 class="centre">Power Plants</h3>
-                    <p class="centre">Industrial monitoring systems.</p>
+
+                <div class="stat-card">
+
+                    <h2>1000+</h2>
+
+                    <p>Installations Across Industries</p>
+
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Oil & Gas.avif" alt="Safety Instruments">
-                    </div>
-                    <h3 class="centre">Oil & Gas</h3>
-                    <p class="centre">Portable & fixed gas detection.</p>
+
+                <div class="stat-card">
+
+                    <h2>Complete</h2>
+
+                    <p>Lifecycle Support</p>
+
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Shipping & Offshore.jpeg" alt="Safety Instruments">
-                    </div>
-                    <h3 class="centre">Shipping & Offshore</h3>
-                    <p class="centre">Marine safety solutions.</p>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./image/Infrastructure.jpg" alt="Safety Instruments">
-                    </div>
-                    <h3 class="centre">Infrastructure</h3>
-                    <p class="centre">Instrumentation support.</p>
-                </div>
+
             </div>
+
         </div>
+
     </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Our Expertise
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>Industrial Gas Detection</h3>
+
+                    <p>
+
+                        Fixed and portable gas detection systems for industrial safety.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Fire Detection Systems</h3>
+
+                    <p>
+
+                        Fire alarm, smoke, flame and heat detection solutions.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Calibration Services</h3>
+
+                    <p>
+
+                        Certified calibration and validation of industrial instruments.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Installation & Commissioning</h3>
+
+                    <p>
+
+                        End-to-end implementation and system commissioning.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Preventive Maintenance</h3>
+
+                    <p>
+
+                        AMC, repair, maintenance and technical support services.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Calibration Gas & Accessories</h3>
+
+                    <p>
+
+                        Certified calibration gases, regulators and accessories.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= INDUSTRIES ================= -->
+
+    <section class="highlight">
+
+        <div class="container">
+
+            <h2 class="section-title white">
+
+                Industries We Serve
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">Pharmaceutical & Biotechnology</div>
+
+                <div class="card">Chemical & Petrochemical</div>
+
+                <div class="card">Oil & Gas</div>
+
+                <div class="card">Food & Beverage</div>
+
+                <div class="card">Manufacturing Industries</div>
+
+                <div class="card">Power Plants</div>
+
+                <div class="card">Warehouses & Logistics</div>
+
+                <div class="card">Laboratories</div>
+
+                <div class="card">Commercial Buildings</div>
+
+                <div class="card">Cleanrooms & Process Industries</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY CHOOSE ================= -->
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Why Choose Unixsense LLP?
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>25+ Years Experience</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>10+ Years Proven Track Record</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>End-to-End Turnkey Solutions</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Global Manufacturers</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Prompt Technical Support</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Reliable Calibration & AMC</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MISSION VISION ================= -->
+
+    <section class="company-overview">
+
+        <div class="container">
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>Our Vision</h3>
+
+                    <p>
+
+                        To be a trusted leader in industrial safety by delivering
+                        innovative Gas Detection and Fire Detection Solutions.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Our Mission</h3>
+
+                    <ul>
+
+                        <li>Deliver world-class industrial safety solutions.</li>
+
+                        <li>Build long-term customer relationships.</li>
+
+                        <li>Provide exceptional technical support.</li>
+
+                        <li>Promote safety across industries.</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Our Core Values</h3>
+
+                    <ul>
+
+                        <li>Safety First</li>
+
+                        <li>Integrity</li>
+
+                        <li>Innovation</li>
+
+                        <li>Quality</li>
+
+                        <li>Customer Commitment</li>
+
+                        <li>Technical Excellence</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CTA ================= -->
 
     <section class="cta">
 
         <div class="container">
 
-            <h2>Looking for a Reliable Instrumentation Partner?</h2>
+            <h2>
+
+                Ready to Improve Your Industrial Safety?
+
+            </h2>
 
             <p>
-                Contact Unixsense LLP for product supply,
-                technical consultation and professional service support.
+
+                Our experts are ready to assist you with product selection,
+                calibration services and complete industrial safety solutions.
+
             </p>
 
             <div class="hero-buttons">
-                <a href="#" onclick="openQuote()" class="btn primary">Request Quote</a>
-                <a href="contact.html" class="btn secondary">Contact Us</a>
+
+                <a href="#" onclick="openQuote()" class="btn primary">
+
+                    Request Quote
+
+                </a>
+
+                <a href="contact.html" class="btn secondary">
+
+                    Contact Us
+
+                </a>
+
             </div>
 
         </div>
 
     </section>
+
+    <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
 

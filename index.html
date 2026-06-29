@@ -50,7 +50,7 @@
         }
 
         .card-content {
-            /* padding: 25px; */
+            padding-top: 25px;
             display: flex;
             flex-direction: column;
             flex: 1;
@@ -77,28 +77,51 @@
 <body>
 
     <header>
+
         <div class="container nav-container">
+
             <a href="index.html" class="logo">
-                <img src="logo.png.png" alt="Unixsense LLP">
+                <img src="logo.png" alt="Unixsense LLP">
             </a>
 
-            <nav>
+            <div class="menu-toggle" id="menuToggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <nav id="navbar">
+
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+
+                    <li><a href="index.html">Home</a></li>
+
                     <li><a href="about.html">About</a></li>
+
                     <li><a href="services.html">Services</a></li>
+
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="quote.html" class="quote-btn">Request Quote</a></li>
+
                     <li><a href="contact.html">Contact</a></li>
+
+                    <li>
+                        <a href="#" onclick="openQuote()" class="quote-btn">
+                            Request Quote
+                        </a>
+                    </li>
+
                 </ul>
+
             </nav>
+
         </div>
+
     </header>
 
 
     <!-- Request Quote -->
-
-    <!-- QUOTE MODAL -->
 
     <div class="quote-modal" id="quoteModal">
 
@@ -116,7 +139,21 @@
                 Tell us your requirement and our experts will contact you shortly.
             </p>
 
-            <form id="quoteForm">
+            <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Required -->
+                <input type="hidden" name="access_key" value="66b65da9-f16d-4817-9fa8-e456fb74510f">
+
+                <input type="hidden" name="subject" value="New Quote Request | Unixsense LLP">
+
+                <input type="hidden" name="from_name" value="Unixsense Website">
+
+                <input type="hidden" name="form_type" value="Quote Request">
+
+                <input type="hidden" name="page" id="page">
+
+                <!-- Optional -->
+                <input type="checkbox" name="botcheck" style="display:none;">
 
                 <div class="form-row">
 
@@ -124,7 +161,7 @@
 
                         <label>Company Name *</label>
 
-                        <input type="text" name="company" required>
+                        <input type="text" name="company" placeholder="ABC Industries Pvt Ltd" required>
 
                     </div>
 
@@ -132,7 +169,7 @@
 
                         <label>Contact Person *</label>
 
-                        <input type="text" name="name" required>
+                        <input type="text" name="name" placeholder="John Smith" required>
 
                     </div>
 
@@ -144,7 +181,7 @@
 
                         <label>Email Address *</label>
 
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" placeholder="john@company.com" required>
 
                     </div>
 
@@ -152,7 +189,7 @@
 
                         <label>Mobile Number *</label>
 
-                        <input type="tel" name="phone" required>
+                        <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
 
                     </div>
 
@@ -162,9 +199,11 @@
 
                     <div class="form-group">
 
-                        <label>Requirement Type</label>
+                        <label>Requirement Type *</label>
 
-                        <select id="category">
+                        <select id="category" name="category" required>
+
+                            <option value="">Select</option>
 
                             <option>Products</option>
 
@@ -176,9 +215,9 @@
 
                     <div class="form-group">
 
-                        <label>Product / Service</label>
+                        <label>Product / Service *</label>
 
-                        <select id="requirement" name="requirement">
+                        <select id="requirement" name="requirement" required>
 
                         </select>
 
@@ -188,7 +227,7 @@
 
                 <div class="form-group">
 
-                    <label>Quantity</label>
+                    <label>Estimated Quantity</label>
 
                     <select name="quantity">
 
@@ -212,11 +251,11 @@
 
                     <label>Requirement Details</label>
 
-                    <textarea name="message" rows="5" placeholder="Describe your requirement..."></textarea>
+                    <textarea name="message" rows="6" placeholder="Please describe your requirement..."></textarea>
 
                 </div>
 
-                <button class="btn" type="submit">
+                <button type="submit" class="btn primary" id="quoteSubmitBtn">
 
                     Request Quote
 
@@ -511,12 +550,12 @@
         <div class="container">
             <h2>Need Industrial Instrumentation Support?</h2>
             <p>Contact our experts for product selection, calibration services, and technical support.</p>
-            <a href="quote.html" class="btn primary">Get Free Quote</a>
+            <a href="#" onclick="openQuote()" class="btn primary">Get Free Quote</a>
             <a href="contact.html" class="btn secondary">Talk to Expert</a>
         </div>
     </section>
 
-    <section class="contact">
+    <!-- <section class="contact">
         <div class="container">
             <div class="contact-box">
                 <h2>Contact Information</h2>
@@ -530,16 +569,153 @@
                 <p>📞 +91 9272342636</p>
                 <p>📧 unixsensellp@gmail.com</p>
             </div>
-        </div>
+        </div> -->
     </section>
 
-    <footer>
+    <footer class="footer">
+
         <div class="container">
-            <p>© 2026 Unixsense LLP. All Rights Reserved.</p>
+
+            <div class="footer-grid">
+
+                <!-- Company -->
+
+                <div class="footer-column">
+
+                    <img src="logo.png" class="footer-logo">
+
+                    <p>
+
+                        Unixsense LLP specializes in Industrial Instrumentation,
+                        Gas Detection Systems, Environmental Monitoring,
+                        Calibration, Installation and Maintenance Services
+                        across India.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="about.html">About Us</a></li>
+
+                        <li><a href="services.html">Services</a></li>
+
+                        <li><a href="products.html">Products</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Services -->
+
+                <div class="footer-column">
+
+                    <h3>Our Services</h3>
+
+                    <ul>
+
+                        <li>Calibration Services</li>
+
+                        <li>Installation</li>
+
+                        <li>Commissioning</li>
+
+                        <li>AMC Services</li>
+
+                        <li>Technical Support</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+
+                <div class="footer-column">
+
+                    <h3>Contact Info</h3>
+
+                    <p>
+
+                        📍 Dombivli East, Maharashtra
+
+                    </p>
+
+                    <p>
+
+                        📞 +91 8169085918
+
+                    </p>
+
+                    <p>
+
+                        📞 +91 9272342636
+
+                    </p>
+
+                    <p>
+
+                        ✉ unixsensellp@gmail.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Unixsense LLP. All Rights Reserved.
+
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="https://wa.me/918169085918"><i class="fab fa-whatsapp"></i></a>
+
+                </div>
+
+            </div>
+
         </div>
+
     </footer>
 
+    <a href="https://wa.me/918169085918" class="whatsapp" target="_blank"><img width="62px"
+            src="./image/WhatsApp_icon.png" alt="whatsapp"></a>
+
     <script src="script.js"></script>
+    <script>
+        document.getElementById("page").value = window.location.pathname;
+
+        const quoteForm = document.getElementById("quoteForm");
+
+        quoteForm.addEventListener("submit", function () {
+
+            document.getElementById("quoteSubmitBtn").innerHTML = "Sending...";
+
+        });
+    </script>
 </body>
 
 </html>

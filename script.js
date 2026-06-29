@@ -85,3 +85,30 @@ function closeQuote() {
     document.getElementById("quoteModal").classList.remove("active");
 
 }
+
+
+
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+
+    navbar.classList.toggle("active");
+
+    menuToggle.classList.toggle("active");
+
+});
+
+// Close menu after clicking a link
+
+document.querySelectorAll("#navbar a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navbar.classList.remove("active");
+
+        menuToggle.classList.remove("active");
+
+    });
+
+});
